@@ -17,6 +17,9 @@ let booleanT = true;
 let booleanF = false;
 console.log(say, say1, say2, num1, num2, num3, P, num4, num5, num6, booleanT, booleanF);
 
+// - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ.
+// З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
+
 let firstName = 'Ihor';
 let middleName = 'Olegovych';
 let lastName = 'Oros';
@@ -28,8 +31,7 @@ console.log(person2);
 
 
 
-// - Створити 3 змінних firstName, middleName, lastName, наповнити їх своїм ПІБ.
-// З'єднати їх в одну змінну person (Не об'єкт, просто за допомоги конкатенації)
+
 
 
 // - За допомогою оператора typeof визначити типи наступних змінних та вивести їх в консоль.
@@ -42,7 +44,8 @@ console.log(typeof a);
 console.log(typeof b);
 console.log(typeof c);
 
-
+// Додаткове для тих хто цікавився prompt`oм
+// - За допомогою 3х різних prompt() отримати 3 слова які являються вашими Імям, По-Батькові та роками. та вивести в консоль
 let firstName2 = prompt("Введіть ваше ім'я:");
 let middleName2 = prompt("Введіть ваше по-батькові:");
 let lastName2 = +prompt("Введіть ваш вік:");
