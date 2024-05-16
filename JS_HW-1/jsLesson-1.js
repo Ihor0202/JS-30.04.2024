@@ -53,3 +53,14 @@ let lastName2 = +prompt("Введіть ваш вік:");
 console.log("Ім'я:", firstName2);
 console.log("По-батькові:", middleName2);
 console.log("Вік:", lastName2);
+
+
+let cards = {
+    cardSuit: ['spade', 'diamond','heart', 'clubs'],
+    value: ['6', '7', '8', '9', '10', 'ace','jack','queen','king'],
+    color: ['red','black']
+};
+
+const determineColor = (suit) => {
+    return (suit === 'diamond' || suit === 'heart') ? 'red' : 'black';
+};
