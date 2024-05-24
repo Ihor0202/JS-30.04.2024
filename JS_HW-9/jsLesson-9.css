@@ -1,0 +1,38 @@
+.wrap {
+    background-color: darkgreen;
+    font-size: 35px;
+    color: yellow;
+    margin: 5px;
+}
+.member {
+    background-color: gray;
+    margin-bottom: 50px;
+}
+div {
+    border: black solid 2px;
+}
+.div-course {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.div-title {
+    width: 100%;
+    text-align: center;
+}
+.twoDiv {
+    display: flex;
+    width: 100%;
+}
+.div-month {
+    width: 30%;
+    text-align: center;
+}
+.div-hour {
+    width: 70%;
+    text-align: center;
+}
+.div-modules {
+    width: 100%;
+}
+
