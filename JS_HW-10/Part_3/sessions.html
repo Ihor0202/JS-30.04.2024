@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="sess">
+
+</div>
+
+<script>
+    let lastTimeArr = JSON.parse(localStorage.getItem('sessions'))
+    console.log(lastTimeArr);
+    let divSess = document.getElementsByClassName('sess')[0]
+
+    lastTimeArr.forEach(session => {
+        let p = document.createElement('p')
+        p.innerText = `Заоходив: ${session.visit}`
+        divSess.appendChild(p)
+
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+    // Отримання сесій з локального сховища
+    let sessions = JSON.parse(localStorage.getItem('sessions'));
+
+    // Побудова DOM-структури для кожної сесії
+    const sessionsContainer = document.getElementById('sessions');
+    sessions.forEach(session => {
+        let sessionDiv = document.createElement('div');
+        sessionDiv.className = 'session-block';
+        sessionDiv.innerText = `Відвідування: ${session.visit}`;
+        sessionsContainer.appendChild(sessionDiv);
+    });
+
+</script>
+</body>
+</html>
