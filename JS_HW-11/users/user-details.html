@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>User</h1>
+
+
+<script>
+    fetch(`https://jsonplaceholder.typicode.com/users/${localStorage.getItem('userID')}`)
+    // fetch('https://jsonplaceholder.typicode.com/users/9')
+        .then(res => res.json())
+        .then((user) => {
+            console.log(user)
+            let divUser = document.createElement('div')
+            document.body.appendChild(divUser)
+            let ul = document.createElement('ul')
+            divUser.appendChild(ul)
+
+            ul.innerHTML = `
+            <li>id: ${user.id}</li>
+            <li>name: ${user.name}</li>
+            <li>username: ${user.username}</li>
+            <li>email: ${user.email}</li>
+            <li>address: ${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</li>
+            <li>phone: ${user.phone}</li>
+            <li>website: ${user.website}</li>
+            <li>company: ${user.company.name}, ${user.company.catchPhrase}, ${user.company.bs}</li>
+            `
+
+            // я вирішив піти простим шляхом бо цей цикл мені виводить обджект обджект. Підскажіть будь ласка чому
+
+
+            //     for (const key in user) {
+            //         let li = document.createElement('li')
+            //
+            //         if (typeof user[key] === 'object' && user[key] !== null) {
+            //             user[key].forEach((product) => {
+            //                 for (const productKey in product) {
+            //                     user[key] = productKey
+            //                 }
+            //             })
+            //         }
+            //         ul.appendChild(li)
+            //         console.log(key, user[key])
+            //         li.innerText = `${key}: ${user[key]}`
+            //     }
+        })
+</script>
+</body>
+</html>
